@@ -15,7 +15,8 @@
 			".fluid { margin-right: 2em !important; }",
 			".col.sidebar { display: none !important; }",
 			".col.main { width: 88% !important; }",
-			"nav.toplevel { display: none !important; }"
+			"nav.toplevel { display: none !important; }",
+			".ad { display: none !important; }"
 		],
 
 		"facebook": [
@@ -29,12 +30,19 @@
 			".UFIContainer { width: 750px !important; }"
 		],
 
+		"wikipedia": [
+			"#mw-navigation { display: none !important; }",
+			"#mw-page-base { display: none !important; }",
+			"#content { margin-left: 1em !important; font-size: 1.1em !important; }"
+		],
+
 		"css-tricks": [
 			"aside.grid-1-3 { display: none !important; }",
 			".blog-posts { width: 100% !important; }",
 			".main-nav { display: none !important; }",
 			"#top { display: none !important; }",
-			".page-wrap { margin-top: 0 !important; }"
+			".page-wrap { margin-top: 0 !important; }",
+			".google-ad { display: none !important; }"
 		],
 
 		"netmagazine": [
@@ -89,12 +97,23 @@
 			});
 
 			chrome.browserAction.setBadgeText({
-				text: 'done',
+				text: ':)',
 				tabId: tab.id
 			});
 
 			chrome.browserAction.setBadgeBackgroundColor({
 				color: '#67AA54',
+				tabId: tab.id
+			});
+		}
+		else {
+			chrome.browserAction.setBadgeText({
+				text: ':(',
+				tabId: tab.id
+			});
+
+			chrome.browserAction.setBadgeBackgroundColor({
+				color: '#cc3f3f',
 				tabId: tab.id
 			});
 		}
